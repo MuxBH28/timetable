@@ -20,72 +20,64 @@
         {
             "time": "09:00",
             "Ponedeljak": "",
-            "Utorak": "P Algoritmi i Strukture Podataka-RI2-RS2 (A2)",
-            "Srijeda": "L Skladista Podataka-RS2 (1-11)",
-            "Četvrtak": "P Back End Web Tehnologije-RS2 (3-02)",
-            "Petak": "P Programski Jezici i Prevodioci-RI3pjp-RS2 (S0)"
+            "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
+            "Srijeda": "L Skladišta Podataka - SP (1-11)",
+            "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
+            "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
         },
         {
             "time": "10:00",
             "Ponedeljak": "",
-            "Utorak": "P Algoritmi i Strukture Podataka-RI2-RS2 (A2)",
-            "Srijeda": "L Skladista Podataka-RS2 (1-11)",
-            "Četvrtak": "P Back End Web Tehnologije-RS2 (3-02)",
-            "Petak": "P Programski Jezici i Prevodioci-RI3pjp-RS2 (S0)"
-        },
-        {
-            "time": "10:30",
-            "Ponedeljak": "",
-            "Utorak": "P Algoritmi i Strukture Podataka-RI2-RS2 (A2)",
-            "Srijeda": "L Testiranje Softvera-RS2ts-1 (1-13)",
-            "Četvrtak": "P Back End Web Tehnologije-RS2 (3-02)",
-            "Petak": "P Programski Jezici i Prevodioci-RI3pjp-RS2 (S0)"
+            "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
+            "Srijeda": "L Skladišta Podataka - SP (1-11)",
+            "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
+            "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
         },
         {
             "time": "11:00",
             "Ponedeljak": "",
-            "Utorak": "P Algoritmi i Strukture Podataka-RI2-RS2 (A2)",
-            "Srijeda": "L Testiranje Softvera-RS2ts-1 (1-13)",
-            "Četvrtak": "P Back End Web Tehnologije-RS2 (3-02)",
-            "Petak": "P Programski Jezici i Prevodioci-RI3pjp-RS2 (S0)"
+            "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
+            "Srijeda": "L Testiranje Softvera - TS (1-13)",
+            "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
+            "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
         },
         {
             "time": "12:00",
             "Ponedeljak": "",
-            "Utorak": "P Interakcija Covjek Računar-AEM2icr-RS2 (2-01)",
-            "Srijeda": "L Programski Jezici i Prevodioci-RS2pjp-1-RI3pjp-3 (1-11)",
-            "Četvrtak": "P Skladista Podataka-RS2 (0-03)",
+            "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
+            "Srijeda": "L Programski Jezici i Prevodioci - PJP (1-11)",
+            "Četvrtak": "P Skladišta Podataka - SP (0-03)",
             "Petak": ""
         },
         {
             "time": "13:00",
             "Ponedeljak": "",
-            "Utorak": "P Interakcija Covjek Računar-AEM2icr-RS2 (2-01)",
+            "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
             "Srijeda": "",
-            "Četvrtak": "P Skladista Podataka-RS2 (0-03)",
+            "Četvrtak": "P Skladišta Podataka - SP (0-03)",
             "Petak": ""
         },
         {
             "time": "13:30",
             "Ponedeljak": "",
-            "Utorak": "P Interakcija Covjek Računar-AEM2icr-RS2 (2-01)",
-            "Srijeda": "L Algoritmi i Strukture Podataka-RS2asp-1 (1-04)",
-            "Četvrtak": "P Skladista Podataka-RS2 (0-03)",
+            "Utorak": "",
+            "Srijeda": "L Algoritmi i Strukture Podataka - ASP (1-04)",
+            "Četvrtak": "",
             "Petak": ""
         },
         {
             "time": "14:00",
             "Ponedeljak": "",
-            "Utorak": "P Interakcija Covjek Računar-AEM2icr-RS2 (2-01)",
-            "Srijeda": "L Algoritmi i Strukture Podataka-RS2asp-1 (1-04)",
-            "Četvrtak": "P Skladista Podataka-RS2 (0-03)",
+            "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
+            "Srijeda": "",
+            "Četvrtak": "P Skladišta Podataka - SP (0-03)",
             "Petak": ""
         },
         {
             "time": "15:00",
             "Ponedeljak": "",
             "Utorak": "",
-            "Srijeda": "P Testiranje Softvera-RS2 (0-03)",
+            "Srijeda": "P Testiranje Softvera - TS (0-03)",
             "Četvrtak": "",
             "Petak": ""
         },
@@ -93,7 +85,7 @@
             "time": "16:00",
             "Ponedeljak": "",
             "Utorak": "",
-            "Srijeda": "P Testiranje Softvera-RS2 (0-03)",
+            "Srijeda": "P Testiranje Softvera - TS (0-03)",
             "Četvrtak": "",
             "Petak": ""
         },
@@ -101,7 +93,7 @@
             "time": "17:00",
             "Ponedeljak": "",
             "Utorak": "",
-            "Srijeda": "P Testiranje Softvera-RS2 (0-03)",
+            "Srijeda": "P Testiranje Softvera - TS (0-03)",
             "Četvrtak": "",
             "Petak": ""
         }

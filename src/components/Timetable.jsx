@@ -3,7 +3,7 @@ import scheduleData from "../assets/schedule.json";
 
 const Timetable = () => {
     const [search, setSearch] = useState("");
-    const [filter, setFilter] = useState("all");
+    const [filters, setFilters] = useState({ P: true, L: true });
     const [currentHour, setCurrentHour] = useState(new Date().getHours());
     const [currentMinute, setCurrentMinute] = useState(new Date().getMinutes());
 
@@ -24,13 +24,17 @@ const Timetable = () => {
         return "next";
     };
 
+    // Flatten schedule, svaki predmet za svaki dan
     const flattenedSchedule = [];
     scheduleData.schedule.forEach((slot) => {
         scheduleData.days.forEach((day) => {
             if (slot[day]) {
                 const subject = slot[day];
                 const type = subject.startsWith("P") ? "P" : "L";
-                const titleWithoutType = subject.replace(/^[PL]\s*/, "").replace(/\(.*?\)$/, "").trim();
+                const titleWithoutType = subject
+                    .replace(/^[PL]\s*/, "")
+                    .replace(/\(.*?\)$/, "")
+                    .trim();
                 const roomMatch = subject.match(/\((.*?)\)$/);
                 const room = roomMatch ? roomMatch[1] : "";
 
@@ -40,15 +44,16 @@ const Timetable = () => {
                     type,
                     title: titleWithoutType,
                     room,
-                    status: getCardStatus(slot.time)
+                    status: getCardStatus(slot.time),
                 });
             }
         });
     });
 
+    // Filter prema search-u i checkboxovima
     const filteredSchedule = flattenedSchedule.filter(
         (item) =>
-            (filter === "all" || item.type === filter) &&
+            filters[item.type] &&
             item.title.toLowerCase().includes(search.toLowerCase())
     );
 
@@ -71,14 +76,11 @@ const Timetable = () => {
 
     return (
         <section className="container mx-auto px-4 py-6">
-            <h1
-                className="text-xl font-bold mb-4"
-                data-aos="fade-down"
-                data-aos-duration="1000"
-            >
-                Raspored za {scheduleData.year}. godinu - {scheduleData.program}
+            <h1 className="text-xl font-bold mb-4 text-center">
+                Raspored za {scheduleData.year}. godinu <br /> {scheduleData.program}
             </h1>
 
+            {/* Search i checkbox filter */}
             <div
                 className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"
                 data-aos="fade-up"
@@ -90,43 +92,57 @@ const Timetable = () => {
                     onChange={(e) => setSearch(e.target.value)}
                     className="px-4 py-2 border rounded w-full sm:w-64"
                 />
-                <select
-                    value={filter}
-                    onChange={(e) => setFilter(e.target.value)}
-                    className="px-4 py-2 border rounded w-full sm:w-48"
-                >
-                    <option value="all">Svi tipovi</option>
-                    <option value="P">Predavanje</option>
-                    <option value="L">Laboratorija</option>
-                </select>
+
+                <div className="flex gap-4 items-center">
+                    <label className="flex items-center gap-1">
+                        <input
+                            type="checkbox"
+                            checked={filters.P}
+                            onChange={() =>
+                                setFilters((prev) => ({ ...prev, P: !prev.P }))
+                            }
+                        />
+                        Predavanja
+                    </label>
+                    <label className="flex items-center gap-1">
+                        <input
+                            type="checkbox"
+                            checked={filters.L}
+                            onChange={() =>
+                                setFilters((prev) => ({ ...prev, L: !prev.L }))
+                            }
+                        />
+                        Laboratorije
+                    </label>
+                </div>
             </div>
 
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
                 {daysWithClasses.map((day) => (
                     <div key={day} data-aos="fade-up">
                         <h2 className="text-xl font-semibold mb-2 text-center">{day}</h2>
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-4">
                             {filteredSchedule
                                 .filter((item) => item.day === day)
                                 .map((item, idx) => (
-                                    <div
+                                    <article
                                         key={idx}
-                                        className={`p-4 rounded shadow flex flex-col gap-1 ${getBgColor(item.status)}`}
+                                        className={`p-4 rounded shadow flex flex-col gap-2 ${getBgColor(item.status)}`}
                                         data-aos="fade-right"
                                     >
-                                        <div className="flex justify-between items-center">
-                                            <span className="font-semibold">{item.time}</span>
-                                            <span className="text-sm font-medium uppercase">
-                                                {item.type === "P" ? "Predavanje" : "Laboratorija"}
+                                        <span className="text-x font-bold uppercase text-center">
+                                            {item.type === "P" ? "Predavanje" : "Laboratorija"}
+                                        </span>
+                                        <p className="font-semibold text-center">{item.title}</p>
+                                        <div className="flex justify-between items-center text-x">
+                                            <span className="bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded">
+                                                {item.room ? `Sala: ${item.room}` : ""}
+                                            </span>
+                                            <span className="bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded">
+                                                {item.time}
                                             </span>
                                         </div>
-                                        <p className="font-medium">{item.title}</p>
-                                        {item.room && (
-                                            <span className="text-xs bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded inline-block w-fit">
-                                                Sala: {item.room}
-                                            </span>
-                                        )}
-                                    </div>
+                                    </article>
                                 ))}
                         </div>
                     </div>
@@ -134,7 +150,7 @@ const Timetable = () => {
             </section>
 
             <div className="mt-8 flex flex-col items-center gap-4" data-aos="fade-in">
-                <p className="text-lg text-gray-600 dark:text-gray-300 text-center" data-aos="fade-in">
+                <p className="text-lg text-gray-600 dark:text-gray-300 text-center">
                     Trenutni raspored je preuzet sa ovog <strong>c2</strong> linka:
                 </p>
                 <a
@@ -142,14 +158,12 @@ const Timetable = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
-                    data-aos="fade-in"
                 >
                     Otvori PDF <i className="bi bi-box-arrow-up-right"></i>
                 </a>
             </div>
         </section>
     );
-
 };
 
 export default Timetable;

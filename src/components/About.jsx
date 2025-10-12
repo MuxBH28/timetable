@@ -25,7 +25,6 @@ const About = () => {
 
                 <p className="text-gray-700 mb-4"> Korisnici imaju mogućnost instalacije Rasporeda kao PWA (Progressive Web App) za brži i offline pristup. </p>
 
-
                 <p className="text-gray-700 mb-4">
                     Projekat i njegov izvorni kod možete istražiti na GitHub-u:
                     <br />
@@ -39,9 +38,21 @@ const About = () => {
                     </a>
                 </p>
 
-                <p className="text-gray-700 mb-4">
+                <hr />
+
+                <p className="text-gray-700 my-4 text-left">
                     Napravili studenti, za studente — bez ikakvih garancija da sve funkcioniše savršeno.
                 </p>
+
+                <div className="mb-4 text-gray-700 text-left">
+                    <p className="font-semibold mb-2">Studenti koji su zaslužni za ovo remek-djelo stranice:</p>
+                    <ul className="list-disc list-inside space-y-1">
+                        <li>Harun Hodžić - Dizajn i savjeti</li>
+                        <li>Ilhan Čukojević - Dizajn i pronalaženje bugova</li>
+                        <li>Bilal Ozdić - Drive linkovi</li>
+                        <li>Muhammed Šehić</li>
+                    </ul>
+                </div>
             </article>
         </section>
     );
