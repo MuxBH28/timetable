@@ -24,7 +24,7 @@ npm install
 npm run dev
 ```
 
-## 🌐 Deploy
+## Deploy
 
 The application is available at: <https://timetable.msehic.com>
 

@@ -132,6 +132,21 @@ const Timetable = () => {
                     </div>
                 ))}
             </section>
+
+            <div className="mt-8 flex flex-col items-center gap-4" data-aos="fade-in">
+                <p className="text-lg text-gray-600 dark:text-gray-300 text-center" data-aos="fade-in">
+                    Trenutni raspored je preuzet sa ovog <strong>c2</strong> linka:
+                </p>
+                <a
+                    href="https://people.etf.unsa.ba/~sribic/raspored20252026/rasporedzimski2025-26_cijelegodineV2.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
+                    data-aos="fade-in"
+                >
+                    Otvori PDF <i className="bi bi-box-arrow-up-right"></i>
+                </a>
+            </div>
         </section>
     );
 

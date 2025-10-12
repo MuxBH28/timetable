@@ -20,6 +20,16 @@
         "icon": "bi-file-earmark-excel"
     },
     {
+        "name": "RS Drive",
+        "url": "https://drive.google.com/drive/u/1/folders/1BVa-40IAsiKD0HixIRmreVOuJfMFlmLv",
+        "icon": "bi-device-hdd"
+    },
+    {
+        "name": "ETF Drive",
+        "url": "https://drive.google.com/drive/folders/1HlM7zFCky87v_9oa14nPdWpf6O0QT-YR",
+        "icon": "bi-device-hdd-fill"
+    },
+    {
         "name": "Web stranica fakulteta",
         "url": "https://etf.unsa.ba/",
         "icon": "bi-building"

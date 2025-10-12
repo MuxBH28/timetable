@@ -62,35 +62,35 @@ const Main = () => {
     return (
         <section
             className="min-h-screen container mx-auto px-4 py-6 flex flex-col items-center justify-center"
-            data-aos
+            data-aos="fade-in"
         >
-            <h1 className="text-2xl font-bold mb-6 text-center" data-aos>
+            <h1 className="text-2xl font-bold mb-6 text-center" data-aos="fade-in">
                 {todaySchedule.length > 0
                     ? `Dnevni raspored - ${today}`
                     : "Dnevni raspored"}
             </h1>
 
             {todaySchedule.length > 0 ? (
-                <div className="flex flex-col gap-4 w-full max-w-xl" data-aos>
+                <div className="flex flex-col gap-4 w-full max-w-xl" data-aos="fade-in">
                     {todaySchedule.map((slot, idx) => (
                         <div
                             key={idx}
                             className={`p-4 rounded shadow ${getBgColor(slot.status)}`}
-                            data-aos
+                            data-aos="fade-in"
                         >
-                            <div className="flex justify-between items-center mb-2" data-aos>
+                            <div className="flex justify-between items-center mb-2" data-aos="fade-in">
                                 <span className="font-semibold">{slot.time}</span>
                                 <span className="text-sm font-medium uppercase">
                                     {slot.subject.startsWith("P") ? "Predavanje" : "Laboratorija"}
                                 </span>
                             </div>
-                            <p className="font-semibold" data-aos>
+                            <p className="font-semibold" data-aos="fade-in">
                                 {slot.subject.replace(/\([^)]+\)/, "").replace(/^[PL]\s*/, "")}
                             </p>
                             {slot.room && (
                                 <span
                                     className="inline-block mt-2 px-2 py-1 text-xs font-medium bg-gray-200 dark:bg-gray-700 rounded"
-                                    data-aos
+                                    data-aos="fade-in"
                                 >
                                     {slot.room}
                                 </span>
@@ -99,35 +99,20 @@ const Main = () => {
                     ))}
                 </div>
             ) : (
-                <div className="flex flex-col items-center gap-4 mt-10" data-aos>
-                    <img src="resources/logo.png" alt="Logo" className="w-1/5" data-aos />
-                    <p className="text-lg font-medium text-gray-600 dark:text-gray-300" data-aos>
+                <div className="flex flex-col items-center gap-4 mt-10" data-aos="fade-in">
+                    <img src="resources/logo.png" alt="Logo" className="w-1/5" data-aos="fade-in" />
+                    <p className="text-lg font-medium text-gray-600 dark:text-gray-300" data-aos="fade-in">
                         Nema predmeta danas, odmori
                     </p>
                     <Link
                         to="/timetable"
                         className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-                        data-aos
+                        data-aos="fade-in"
                     >
                         Pogledaj cijeli raspored
                     </Link>
                 </div>
             )}
-
-            <div className="mt-8 flex flex-col items-center gap-4" data-aos>
-                <p className="text-lg text-gray-600 dark:text-gray-300 text-center" data-aos>
-                    Trenutni raspored je preuzet sa ovog <strong>c2</strong> linka:
-                </p>
-                <a
-                    href="https://people.etf.unsa.ba/~sribic/raspored20252026/rasporedzimski2025-26_cijelegodineV2.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
-                    data-aos
-                >
-                    Otvori PDF <i className="bi bi-box-arrow-up-right"></i>
-                </a>
-            </div>
         </section>
     );
 };
