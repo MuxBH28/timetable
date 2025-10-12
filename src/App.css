@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    line-height: 25px;
+    background-color: #cfcfcf;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scrollbar-color: #0a0b0b #5e6972;
+}
+
+::selection {
+    background-color: #93A3B1;
+    color: #000000;
+}

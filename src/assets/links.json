@@ -1,0 +1,27 @@
+[
+    {
+        "name": "EUNSA",
+        "url": "https://eunsa.ba/",
+        "icon": "bi-mortarboard"
+    },
+    {
+        "name": "C2",
+        "url": "https://c2.etf.unsa.ba/",
+        "icon": "bi-cloud"
+    },
+    {
+        "name": "C9",
+        "url": "https://c9.etf.unsa.ba/",
+        "icon": "bi-terminal"
+    },
+    {
+        "name": "Zamger",
+        "url": "https://zamger.etf.unsa.ba/",
+        "icon": "bi-file-earmark-excel"
+    },
+    {
+        "name": "Web stranica fakulteta",
+        "url": "https://etf.unsa.ba/",
+        "icon": "bi-building"
+    }
+]
