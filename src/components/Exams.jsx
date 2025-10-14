@@ -37,12 +37,12 @@ const Exams = () => {
                 data-aos="fade-up"
             >
                 <h1 className="text-3xl font-bold mb-6 text-blue-700 flex items-center justify-center gap-2">
-                    <i className="bi bi-mortarboard" /> Nadolazeći ispiti
+                    <i className="bi bi-mortarboard" /> Rokovi
                 </h1>
 
                 {exams.length === 0 ? (
                     <p className="text-gray-600 text-lg">
-                        Trenutno nema nadolazećih ispita.
+                        Trenutno nema nadolazećih ispita i/ili zadaća.
                     </p>
                 ) : (
                     <ul className="space-y-4">

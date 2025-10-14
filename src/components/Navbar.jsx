@@ -5,7 +5,7 @@ const navLinks = [
     { name: "Početna", path: "/", icon: "bi-house" },
     { name: "Raspored", path: "/timetable", icon: "bi-calendar" },
     { name: "Linkovi", path: "/links", icon: "bi-link-45deg" },
-    { name: "Ispiti", path: "/exams", icon: "bi-file-earmark-text" },
+    { name: "Rokovi", path: "/exams", icon: "bi-file-earmark-text" },
     { name: "Legal", path: "/legal", icon: "bi-briefcase" },
     { name: "About", path: "/about", icon: "bi-info-circle" },
     { name: "GitHub", path: "https://github.com/MuxBH28/timetable", external: true, icon: "bi-github" }
@@ -74,13 +74,10 @@ const Navbar = () => {
                             aria-label="toggle menu"
                         >
                             {!isOpen ? (
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
-                                </svg>
+                                <i className="bi bi-list text-2xl"></i>
                             ) : (
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                <i className="bi bi-x-lg text-2xl"></i>
+
                             )}
                         </button>
                     </div>
