@@ -50,6 +50,7 @@ const About = () => {
                         <li>Harun Hodžić - Dizajn i savjeti</li>
                         <li>Ilhan Čukojević - Dizajn i pronalaženje bugova</li>
                         <li>Bilal Ozdić - Drive linkovi</li>
+                        <li>Amel Divović - Testing</li>
                         <li>Muhammed Šehić</li>
                     </ul>
                 </div>
