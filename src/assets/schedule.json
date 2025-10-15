@@ -2,7 +2,7 @@
     "year": 2,
     "program": "Razvoj softvera",
     "days": [
-        "Ponedeljak",
+        "Ponedjeljak",
         "Utorak",
         "Srijeda",
         "Četvrtak",
@@ -11,7 +11,7 @@
     "schedule": [
         {
             "time": "08:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "",
             "Srijeda": "",
             "Četvrtak": "",
@@ -19,7 +19,7 @@
         },
         {
             "time": "09:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
             "Srijeda": "L Skladišta Podataka - SP (1-11)",
             "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
@@ -27,15 +27,23 @@
         },
         {
             "time": "10:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
             "Srijeda": "L Skladišta Podataka - SP (1-11)",
             "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
             "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
         },
         {
+            "time": "10:30",
+            "Ponedjeljak": "",
+            "Utorak": "",
+            "Srijeda": "L Testiranje Softvera - TS (1-13)",
+            "Četvrtak": "",
+            "Petak": ""
+        },
+        {
             "time": "11:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
             "Srijeda": "L Testiranje Softvera - TS (1-13)",
             "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
@@ -43,7 +51,7 @@
         },
         {
             "time": "12:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
             "Srijeda": "L Programski Jezici i Prevodioci - PJP (1-11)",
             "Četvrtak": "P Skladišta Podataka - SP (0-03)",
@@ -51,7 +59,7 @@
         },
         {
             "time": "13:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
             "Srijeda": "",
             "Četvrtak": "P Skladišta Podataka - SP (0-03)",
@@ -59,7 +67,7 @@
         },
         {
             "time": "13:30",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "",
             "Srijeda": "L Algoritmi i Strukture Podataka - ASP (1-04)",
             "Četvrtak": "",
@@ -67,7 +75,7 @@
         },
         {
             "time": "14:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
             "Srijeda": "",
             "Četvrtak": "P Skladišta Podataka - SP (0-03)",
@@ -75,7 +83,7 @@
         },
         {
             "time": "15:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "",
             "Srijeda": "P Testiranje Softvera - TS (0-03)",
             "Četvrtak": "",
@@ -83,7 +91,7 @@
         },
         {
             "time": "16:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "",
             "Srijeda": "P Testiranje Softvera - TS (0-03)",
             "Četvrtak": "",
@@ -91,7 +99,7 @@
         },
         {
             "time": "17:00",
-            "Ponedeljak": "",
+            "Ponedjeljak": "",
             "Utorak": "",
             "Srijeda": "P Testiranje Softvera - TS (0-03)",
             "Četvrtak": "",
