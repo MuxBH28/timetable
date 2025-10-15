@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import scheduleData from "../assets/schedule.json";
-import notificationsData from "../assets/notifications.json";
 
 const Main = () => {
     const days = ["Ponedeljak", "Utorak", "Srijeda", "Četvrtak", "Petak"];
@@ -13,6 +12,7 @@ const Main = () => {
 
     const [touchStartX, setTouchStartX] = useState(null);
     const [touchEndX, setTouchEndX] = useState(null);
+    const [notificationsData, setNotificationsData] = useState([]);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -49,13 +49,19 @@ const Main = () => {
         setToday(newDay);
     };
 
-    const getStatus = (time) => {
-        const [hour, minute] = time.split(":").map(Number);
-        if (hour < currentHour || (hour === currentHour && minute < currentMinute))
-            return "zavrseno";
-        if (hour === currentHour && minute <= currentMinute + 30) return "trenutno";
-        return "sljedece";
+    const getStatus = (startTime, endTime) => {
+        const [sh, sm] = startTime.split(":").map(Number);
+        const [eh, em] = endTime.split(":").map(Number);
+
+        const startTotal = sh * 60 + sm;
+        const endTotal = eh * 60 + em;
+        const nowTotal = currentHour * 60 + currentMinute;
+
+        if (nowTotal < startTotal) return "sljedece";
+        if (nowTotal >= startTotal && nowTotal < endTotal) return "trenutno";
+        return "zavrseno";
     };
+
 
     const getBgColor = (status) => {
         switch (status) {
@@ -123,8 +129,26 @@ const Main = () => {
 
     const todaySchedule = mergedSchedule.map((item) => ({
         ...item,
-        status: getStatus(item.startTime),
+        status: getStatus(item.startTime, addMinutes(item.endTime, 45)),
     }));
+
+    useEffect(() => {
+        async function fetchNotificationsData() {
+            try {
+                const response = await fetch("https://api.npoint.io/63cfd6ed029a3c733430");
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                setNotificationsData(data);
+            } catch (error) {
+                console.error("Error fetching notifications data:", error);
+            }
+        }
+
+        fetchNotificationsData();
+    }, []);
+
 
     return (
         <section
@@ -139,7 +163,7 @@ const Main = () => {
                     day: "2-digit",
                     month: "2-digit",
                     year: "numeric",
-                })} – ${String(currentHour).padStart(2, "0")}:${String(
+                })} - ${String(currentHour).padStart(2, "0")}:${String(
                     currentMinute
                 ).padStart(2, "0")}`}
             </div>
@@ -227,7 +251,11 @@ const Main = () => {
                                     {slot.room ? `Sala: ${slot.room}` : ""}
                                 </span>
                                 <span className="bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded">
-                                    {slot.startTime} – {addMinutes(slot.endTime, 45)}
+                                    {slot.startTime} - {
+                                        idx < todaySchedule.length - 1
+                                            ? todaySchedule[idx + 1].startTime
+                                            : addMinutes(slot.endTime, 45)
+                                    }
                                 </span>
                             </div>
                         </article>
