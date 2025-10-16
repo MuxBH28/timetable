@@ -24,7 +24,6 @@ const Timetable = () => {
         return "next";
     };
 
-    // Flatten schedule, svaki predmet za svaki dan
     const flattenedSchedule = [];
     scheduleData.schedule.forEach((slot) => {
         scheduleData.days.forEach((day) => {
@@ -50,7 +49,6 @@ const Timetable = () => {
         });
     });
 
-    // Filter prema search-u i checkboxovima
     const filteredSchedule = flattenedSchedule.filter(
         (item) =>
             filters[item.type] &&
@@ -75,12 +73,11 @@ const Timetable = () => {
     };
 
     return (
-        <section className="container mx-auto px-4 py-6">
+        <section className="container mx-auto px-4 py-6 bg-gray-100">
             <h1 className="text-xl font-bold mb-4 text-center">
                 Raspored za {scheduleData.year}. godinu <br /> {scheduleData.program}
             </h1>
 
-            {/* Search i checkbox filter */}
             <div
                 className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"
                 data-aos="fade-up"

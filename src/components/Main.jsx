@@ -23,7 +23,7 @@ const Main = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const minSwipeDistance = 50;
+    const minSwipeDistance = 100;
     const onTouchStart = (e) => setTouchStartX(e.targetTouches[0].clientX);
     const onTouchMove = (e) => setTouchEndX(e.targetTouches[0].clientX);
     const onTouchEnd = () => {
@@ -61,7 +61,6 @@ const Main = () => {
         if (nowTotal >= startTotal && nowTotal < endTotal) return "trenutno";
         return "zavrseno";
     };
-
 
     const getBgColor = (status) => {
         switch (status) {
@@ -152,7 +151,7 @@ const Main = () => {
 
     return (
         <section
-            className="min-h-screen container mx-auto px-4 py-6 flex flex-col items-center justify-center select-none"
+            className="min-h-screen container mx-auto px-4 py-6 flex flex-col items-center justify-center select-none bg-gray-100"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
@@ -273,7 +272,7 @@ const Main = () => {
                         data-aos={aosDirection}
                     />
                     <p className="text-lg font-medium text-gray-600 dark:text-gray-300">
-                        Nema predmeta danas, odmori 😎
+                        Nema predmeta danas, odmori
                     </p>
                     <Link
                         to="/timetable"
