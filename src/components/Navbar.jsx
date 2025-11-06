@@ -6,9 +6,7 @@ const navLinks = [
     { name: "Raspored", path: "/timetable", icon: "bi-calendar" },
     { name: "Linkovi", path: "/links", icon: "bi-link-45deg" },
     { name: "Rokovi", path: "/exams", icon: "bi-file-earmark-text" },
-    { name: "Legal", path: "/legal", icon: "bi-briefcase" },
-    { name: "About", path: "/about", icon: "bi-info-circle" },
-    { name: "GitHub", path: "https://github.com/MuxBH28/timetable", external: true, icon: "bi-github" }
+    { name: "About", path: "/about", icon: "bi-info-circle" }
 ];
 
 const Navbar = () => {
