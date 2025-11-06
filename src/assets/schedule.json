@@ -1,109 +1,166 @@
-{
-    "year": 2,
-    "program": "Razvoj softvera",
-    "days": [
-        "Ponedjeljak",
-        "Utorak",
-        "Srijeda",
-        "Četvrtak",
-        "Petak"
-    ],
-    "schedule": [
-        {
-            "time": "08:00",
-            "Ponedjeljak": "",
-            "Utorak": "",
-            "Srijeda": "",
-            "Četvrtak": "",
-            "Petak": ""
-        },
-        {
-            "time": "09:00",
-            "Ponedjeljak": "",
-            "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
-            "Srijeda": "L Skladišta Podataka - SP (1-11)",
-            "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
-            "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
-        },
-        {
-            "time": "10:00",
-            "Ponedjeljak": "",
-            "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
-            "Srijeda": "L Skladišta Podataka - SP (1-11)",
-            "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
-            "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
-        },
-        {
-            "time": "10:30",
-            "Ponedjeljak": "",
-            "Utorak": "",
-            "Srijeda": "L Testiranje Softvera - TS (1-13)",
-            "Četvrtak": "",
-            "Petak": ""
-        },
-        {
-            "time": "11:00",
-            "Ponedjeljak": "",
-            "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
-            "Srijeda": "L Testiranje Softvera - TS (1-13)",
-            "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
-            "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
-        },
-        {
-            "time": "12:00",
-            "Ponedjeljak": "",
-            "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
-            "Srijeda": "L Programski Jezici i Prevodioci - PJP (1-11)",
-            "Četvrtak": "P Skladišta Podataka - SP (0-03)",
-            "Petak": ""
-        },
-        {
-            "time": "13:00",
-            "Ponedjeljak": "",
-            "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
-            "Srijeda": "",
-            "Četvrtak": "P Skladišta Podataka - SP (0-03)",
-            "Petak": ""
-        },
-        {
-            "time": "13:30",
-            "Ponedjeljak": "",
-            "Utorak": "",
-            "Srijeda": "L Algoritmi i Strukture Podataka - ASP (1-04)",
-            "Četvrtak": "",
-            "Petak": ""
-        },
-        {
-            "time": "14:00",
-            "Ponedjeljak": "",
-            "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
-            "Srijeda": "",
-            "Četvrtak": "P Skladišta Podataka - SP (0-03)",
-            "Petak": ""
-        },
-        {
-            "time": "15:00",
-            "Ponedjeljak": "",
-            "Utorak": "",
-            "Srijeda": "P Testiranje Softvera - TS (0-03)",
-            "Četvrtak": "",
-            "Petak": ""
-        },
-        {
-            "time": "16:00",
-            "Ponedjeljak": "",
-            "Utorak": "",
-            "Srijeda": "P Testiranje Softvera - TS (0-03)",
-            "Četvrtak": "",
-            "Petak": ""
-        },
-        {
-            "time": "17:00",
-            "Ponedjeljak": "",
-            "Utorak": "",
-            "Srijeda": "P Testiranje Softvera - TS (0-03)",
-            "Četvrtak": "L Interakcija Čovjek Računar - IČR (Samsung Lab)",
-            "Petak": ""
-        }
-    ]
-}
+[
+    {
+        "year": 2,
+        "program": "Razvoj softvera",
+        "schedule": [
+            {
+                "time": "09:00",
+                "Ponedjeljak": "",
+                "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
+                "Srijeda": "L Skladišta Podataka - SP (1-11)",
+                "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
+                "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
+            },
+            {
+                "time": "10:00",
+                "Ponedjeljak": "",
+                "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
+                "Srijeda": "L Skladišta Podataka - SP (1-11)",
+                "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
+                "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
+            },
+            {
+                "time": "10:30",
+                "Ponedjeljak": "",
+                "Utorak": "",
+                "Srijeda": "L Testiranje Softvera - TS (1-13)",
+                "Četvrtak": "",
+                "Petak": ""
+            },
+            {
+                "time": "11:00",
+                "Ponedjeljak": "",
+                "Utorak": "P Algoritmi i Strukture Podataka - ASP (A2)",
+                "Srijeda": "L Testiranje Softvera - TS (1-13)",
+                "Četvrtak": "P Back End Web Tehnologije - BWT (3-02)",
+                "Petak": "P Programski Jezici i Prevodioci - PJP (S0)"
+            },
+            {
+                "time": "12:00",
+                "Ponedjeljak": "",
+                "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
+                "Srijeda": "L Programski Jezici i Prevodioci - PJP (1-11)",
+                "Četvrtak": "P Skladišta Podataka - SP (0-03)",
+                "Petak": ""
+            },
+            {
+                "time": "13:00",
+                "Ponedjeljak": "",
+                "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
+                "Srijeda": "",
+                "Četvrtak": "P Skladišta Podataka - SP (0-03)",
+                "Petak": ""
+            },
+            {
+                "time": "13:30",
+                "Ponedjeljak": "",
+                "Utorak": "",
+                "Srijeda": "L Algoritmi i Strukture Podataka - ASP (1-04)",
+                "Četvrtak": "",
+                "Petak": ""
+            },
+            {
+                "time": "14:00",
+                "Ponedjeljak": "",
+                "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
+                "Srijeda": "",
+                "Četvrtak": "P Skladišta Podataka - SP (0-03)",
+                "Petak": ""
+            },
+            {
+                "time": "15:00",
+                "Ponedjeljak": "",
+                "Utorak": "",
+                "Srijeda": "P Testiranje Softvera - TS (0-03)",
+                "Četvrtak": "",
+                "Petak": ""
+            },
+            {
+                "time": "16:00",
+                "Ponedjeljak": "",
+                "Utorak": "",
+                "Srijeda": "P Testiranje Softvera - TS (0-03)",
+                "Četvrtak": "",
+                "Petak": ""
+            },
+            {
+                "time": "17:00",
+                "Ponedjeljak": "",
+                "Utorak": "",
+                "Srijeda": "P Testiranje Softvera - TS (0-03)",
+                "Četvrtak": "L Interakcija Čovjek Računar - IČR (Samsung Lab)",
+                "Petak": ""
+            }
+        ]
+    },
+    {
+        "year": 3,
+        "program": "RI smjer",
+        "schedule": [
+            {
+                "time": "09:00",
+                "Ponedjeljak": "P Osnove elektrotehnike (A4)",
+                "Utorak": "P Osnove operacionih istraživanja (A4)",
+                "Srijeda": "P Osnove elektrotehnike (A4)",
+                "Četvrtak": "P Logički dizajn (A2)",
+                "Petak": "P Diskretna matematika (A3)"
+            },
+            {
+                "time": "10:00",
+                "Ponedjeljak": "P Osnove elektrotehnike (A4)",
+                "Utorak": "P Osnove operacionih istraživanja (A4)",
+                "Srijeda": "P Osnove elektrotehnike (A4)",
+                "Četvrtak": "P Logički dizajn (A2)",
+                "Petak": "P Diskretna matematika (A3)"
+            },
+            {
+                "time": "11:00",
+                "Ponedjeljak": "P Inženjerska fizika 1 (A4)",
+                "Utorak": "P Osnove operacionih istraživanja (A4)",
+                "Srijeda": "",
+                "Četvrtak": "P Logički dizajn (A2)",
+                "Petak": "P Diskretna matematika (A3)"
+            },
+            {
+                "time": "12:00",
+                "Ponedjeljak": "P Inženjerska fizika 1 (A4)",
+                "Utorak": "P Inženjerska matematika 1 (A4)",
+                "Srijeda": "",
+                "Četvrtak": "",
+                "Petak": ""
+            },
+            {
+                "time": "13:00",
+                "Ponedjeljak": "P Inženjerska fizika 1 (A4)",
+                "Utorak": "P Inženjerska matematika 1 (A4)",
+                "Srijeda": "",
+                "Četvrtak": "",
+                "Petak": ""
+            },
+            {
+                "time": "14:00",
+                "Ponedjeljak": "L Diskretna matematika (A2)",
+                "Utorak": "L Inženjerska fizika 1 (A2)",
+                "Srijeda": "L Osnove elektrotehnike (A2)",
+                "Četvrtak": "L Inženjerska matematika 1 (A2)",
+                "Petak": ""
+            },
+            {
+                "time": "15:00",
+                "Ponedjeljak": "L Diskretna matematika (A2)",
+                "Utorak": "L Inženjerska fizika 1 (A2)",
+                "Srijeda": "L Osnove elektrotehnike (A2)",
+                "Četvrtak": "L Inženjerska matematika 1 (A2)",
+                "Petak": ""
+            },
+            {
+                "time": "16:00",
+                "Ponedjeljak": "",
+                "Utorak": "",
+                "Srijeda": "",
+                "Četvrtak": "",
+                "Petak": "L Logički dizajn (2-02)"
+            }
+        ]
+    }
+]

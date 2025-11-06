@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import scheduleData from "../assets/schedule.json";
 
 const Main = () => {
-    const days = ["Ponedeljak", "Utorak", "Srijeda", "Četvrtak", "Petak"];
+    const days = ["Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak"];
     const now = new Date();
     const [currentHour, setCurrentHour] = useState(now.getHours());
     const [currentMinute, setCurrentMinute] = useState(now.getMinutes());
@@ -13,6 +13,18 @@ const Main = () => {
     const [touchStartX, setTouchStartX] = useState(null);
     const [touchEndX, setTouchEndX] = useState(null);
     const [notificationsData, setNotificationsData] = useState([]);
+
+    const [program, setProgram] = useState(
+        localStorage.getItem("program") || "Razvoj softvera"
+    );
+
+    const [schedule, setSchedule] = useState([]);
+
+    useEffect(() => {
+        const selectedSchedule =
+            scheduleData.find((item) => item.program === program)?.schedule || [];
+        setSchedule(selectedSchedule);
+    }, [program]);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -94,7 +106,7 @@ const Main = () => {
         return `${newH}:${newM}`;
     };
 
-    const todayScheduleRaw = scheduleData.schedule
+    const todayScheduleRaw = schedule
         .map((slot) => ({
             time: slot.time,
             subject: slot[today] || "",
@@ -134,10 +146,10 @@ const Main = () => {
     useEffect(() => {
         async function fetchNotificationsData() {
             try {
-                const response = await fetch("https://api.npoint.io/63cfd6ed029a3c733430");
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+                const response = await fetch(
+                    "https://api.npoint.io/63cfd6ed029a3c733430"
+                );
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.json();
                 setNotificationsData(data);
             } catch (error) {
@@ -147,7 +159,6 @@ const Main = () => {
 
         fetchNotificationsData();
     }, []);
-
 
     return (
         <section
@@ -221,6 +232,7 @@ const Main = () => {
                 <button onClick={nextDay} className="text-2xl hover:text-blue-600">
                     <i className="bi bi-chevron-right" />
                 </button>
+
             </div>
 
             {todaySchedule.length > 0 ? (
@@ -282,6 +294,21 @@ const Main = () => {
                     </Link>
                 </div>
             )}
+
+            <div className="mt-6 text-center">
+                <h1 className="font-bold text-xl">Odabrani program: {program}</h1>
+                <button
+                    className="px-3 py-1 my-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                    onClick={() => {
+                        const noviProgram =
+                            program === "Razvoj softvera" ? "RI smjer" : "Razvoj softvera";
+                        setProgram(noviProgram);
+                        localStorage.setItem("program", noviProgram);
+                    }}
+                >
+                    Promijeni program
+                </button>
+            </div>
         </section>
     );
 };

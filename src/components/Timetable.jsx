@@ -7,6 +7,17 @@ const Timetable = () => {
     const [currentHour, setCurrentHour] = useState(new Date().getHours());
     const [currentMinute, setCurrentMinute] = useState(new Date().getMinutes());
 
+    const [program, setProgram] = useState(
+        localStorage.getItem("program") || "Razvoj softvera"
+    );
+
+    const selectedScheduleData =
+        scheduleData.find((p) => p.program === program) || scheduleData[0];
+
+    const schedule = selectedScheduleData.schedule;
+
+    const days = ["Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak"];
+
     useEffect(() => {
         const timer = setInterval(() => {
             const now = new Date();
@@ -25,8 +36,8 @@ const Timetable = () => {
     };
 
     const flattenedSchedule = [];
-    scheduleData.schedule.forEach((slot) => {
-        scheduleData.days.forEach((day) => {
+    schedule.forEach((slot) => {
+        days.forEach((day) => {
             if (slot[day]) {
                 const subject = slot[day];
                 const type = subject.startsWith("P") ? "P" : "L";
@@ -50,12 +61,10 @@ const Timetable = () => {
     });
 
     const filteredSchedule = flattenedSchedule.filter(
-        (item) =>
-            filters[item.type] &&
-            item.title.toLowerCase().includes(search.toLowerCase())
+        (item) => filters[item.type] && item.title.toLowerCase().includes(search.toLowerCase())
     );
 
-    const daysWithClasses = scheduleData.days.filter((day) =>
+    const daysWithClasses = days.filter((day) =>
         filteredSchedule.some((item) => item.day === day)
     );
 
@@ -75,13 +84,10 @@ const Timetable = () => {
     return (
         <section className="container mx-auto px-4 py-6 bg-gray-100">
             <h1 className="text-xl font-bold mb-4 text-center">
-                Raspored za {scheduleData.year}. godinu <br /> {scheduleData.program}
+                Raspored za {selectedScheduleData.year}. godinu <br /> {selectedScheduleData.program}
             </h1>
 
-            <div
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"
-                data-aos="fade-up"
-            >
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                 <input
                     type="text"
                     placeholder="Pretraži predmet..."
@@ -89,15 +95,12 @@ const Timetable = () => {
                     onChange={(e) => setSearch(e.target.value)}
                     className="px-4 py-2 border rounded w-full sm:w-64"
                 />
-
                 <div className="flex gap-4 items-center">
                     <label className="flex items-center gap-1">
                         <input
                             type="checkbox"
                             checked={filters.P}
-                            onChange={() =>
-                                setFilters((prev) => ({ ...prev, P: !prev.P }))
-                            }
+                            onChange={() => setFilters((prev) => ({ ...prev, P: !prev.P }))}
                         />
                         Predavanja
                     </label>
@@ -105,9 +108,7 @@ const Timetable = () => {
                         <input
                             type="checkbox"
                             checked={filters.L}
-                            onChange={() =>
-                                setFilters((prev) => ({ ...prev, L: !prev.L }))
-                            }
+                            onChange={() => setFilters((prev) => ({ ...prev, L: !prev.L }))}
                         />
                         Laboratorije
                     </label>
@@ -116,7 +117,7 @@ const Timetable = () => {
 
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
                 {daysWithClasses.map((day) => (
-                    <div key={day} data-aos="fade-up">
+                    <div key={day}>
                         <h2 className="text-xl font-semibold mb-2 text-center">{day}</h2>
                         <div className="flex flex-col gap-4">
                             {filteredSchedule
@@ -125,7 +126,6 @@ const Timetable = () => {
                                     <article
                                         key={idx}
                                         className={`p-4 rounded shadow flex flex-col gap-2 ${getBgColor(item.status)}`}
-                                        data-aos="fade-right"
                                     >
                                         <span className="text-x font-bold uppercase text-center">
                                             {item.type === "P" ? "Predavanje" : "Laboratorija"}
@@ -145,20 +145,6 @@ const Timetable = () => {
                     </div>
                 ))}
             </section>
-
-            <div className="mt-8 flex flex-col items-center gap-4" data-aos="fade-in">
-                <p className="text-lg text-gray-600 dark:text-gray-300 text-center">
-                    Trenutni raspored je preuzet sa ovog <strong>c2</strong> linka:
-                </p>
-                <a
-                    href="https://people.etf.unsa.ba/~sribic/raspored20252026/rasporedzimski2025-26_cijelegodineV2.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
-                >
-                    Otvori PDF <i className="bi bi-box-arrow-up-right"></i>
-                </a>
-            </div>
         </section>
     );
 };
