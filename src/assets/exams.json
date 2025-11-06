@@ -1,1 +1,47 @@
-[]
+{
+    "exams": [
+        {
+            "name": "Algoritmi i strukture podataka",
+            "date": "2025-11-24",
+            "time": "12:00",
+            "room": "1-01",
+            "type": "Pismeni ispit"
+        },
+        {
+            "name": "Programski jezici i prevodioci",
+            "date": "2025-11-26",
+            "time": "15:00",
+            "room": "S0",
+            "type": "Pismeni ispit"
+        },
+        {
+            "name": "Back-end web tehnologije",
+            "date": "2025-11-27",
+            "time": "09:00",
+            "room": "1-01",
+            "type": "Pismeni ispit"
+        },
+        {
+            "name": "Skladišta podataka",
+            "date": "2025-11-28",
+            "time": "13:00",
+            "room": "A1",
+            "type": "Pismeni ispit"
+        },
+        {
+            "name": "Testiranje softvera",
+            "date": "2025-11-29",
+            "time": "15:00",
+            "room": "A2",
+            "type": "Pismeni ispit"
+        }
+    ],
+    "homeworks": [
+        {
+            "name": "Pripremna zadaća ASP",
+            "due": "2025-11-09T23:59",
+            "link": "https://c2.etf.unsa.ba/mod/assign/view.php?id=103311",
+            "type": "Zadaća"
+        }
+    ]
+}

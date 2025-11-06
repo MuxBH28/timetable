@@ -151,7 +151,7 @@ const Main = () => {
 
     return (
         <section
-            className="min-h-screen container mx-auto px-4 py-6 flex flex-col items-center justify-center select-none bg-gray-100"
+            className="min-h-screen mx-auto px-4 py-6 flex flex-col items-center justify-center select-none bg-gray-100"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
