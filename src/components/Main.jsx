@@ -95,6 +95,7 @@ const Main = () => {
     const getType = (subject) => {
         if (subject.startsWith("P")) return "P";
         if (subject.startsWith("L")) return "L";
+        if (subject.startsWith("T")) return "T";
         return "";
     };
 
@@ -249,12 +250,16 @@ const Main = () => {
                             data-aos={aosDirection}
                         >
                             <span className="font-bold uppercase text-center">
-                                {slot.type === "P" ? "Predavanje" : "Laboratorija"}
+                                {slot.type === "P"
+                                    ? "Predavanje"
+                                    : slot.type === "L"
+                                        ? "Laboratorija"
+                                        : "Tutorijal"}
                             </span>
                             <p className="font-semibold text-center">
                                 {slot.subject
                                     .replace(/\([^)]+\)/, "")
-                                    .replace(/^[PL]\s*/, "")
+                                    .replace(/^[PLT]\s*/, "")
                                     .trim()}
                             </p>
                             <div className="flex justify-between items-center text-sm">

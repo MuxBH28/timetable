@@ -103,7 +103,7 @@
                 "Utorak": "P Osnove operacionih istraživanja (A4)",
                 "Srijeda": "P Osnove elektrotehnike (A4)",
                 "Četvrtak": "P Logički dizajn (A2)",
-                "Petak": "P Diskretna matematika (A3)"
+                "Petak": "P Diskretna matematika (A2)"
             },
             {
                 "time": "10:00",
@@ -111,7 +111,7 @@
                 "Utorak": "P Osnove operacionih istraživanja (A4)",
                 "Srijeda": "P Osnove elektrotehnike (A4)",
                 "Četvrtak": "P Logički dizajn (A2)",
-                "Petak": "P Diskretna matematika (A3)"
+                "Petak": "P Diskretna matematika (A2)"
             },
             {
                 "time": "11:00",
@@ -119,7 +119,7 @@
                 "Utorak": "P Osnove operacionih istraživanja (A4)",
                 "Srijeda": "",
                 "Četvrtak": "P Logički dizajn (A2)",
-                "Petak": "P Diskretna matematika (A3)"
+                "Petak": "P Diskretna matematika (A2)"
             },
             {
                 "time": "12:00",
@@ -135,31 +135,39 @@
                 "Utorak": "P Inženjerska matematika 1 (A4)",
                 "Srijeda": "",
                 "Četvrtak": "",
-                "Petak": ""
+                "Petak": "P Inženjerska matematika 1 (A1)"
             },
             {
                 "time": "14:00",
-                "Ponedjeljak": "L Diskretna matematika (A2)",
-                "Utorak": "L Inženjerska fizika 1 (A2)",
-                "Srijeda": "L Osnove elektrotehnike (A2)",
-                "Četvrtak": "L Inženjerska matematika 1 (A2)",
-                "Petak": ""
+                "Ponedjeljak": "",
+                "Utorak": "T Inženjerska fizika 1 (A4)",
+                "Srijeda": "T Osnove elektrotehnike (2-03)",
+                "Četvrtak": "T Inženjerska matematika 1 (A2)",
+                "Petak": "P Inženjerska matematika 1 (A1)"
             },
             {
                 "time": "15:00",
-                "Ponedjeljak": "L Diskretna matematika (A2)",
-                "Utorak": "L Inženjerska fizika 1 (A2)",
-                "Srijeda": "L Osnove elektrotehnike (A2)",
-                "Četvrtak": "L Inženjerska matematika 1 (A2)",
-                "Petak": ""
+                "Ponedjeljak": "L Osnove operacionih istraživanja (1-13)",
+                "Utorak": "T Inženjerska fizika 1 (A4)",
+                "Srijeda": "T Osnove elektrotehnike (2-03)",
+                "Četvrtak": "T Inženjerska matematika 1 (A2)",
+                "Petak": "T Logički dizajn (2-02)"
             },
             {
                 "time": "16:00",
-                "Ponedjeljak": "",
+                "Ponedjeljak": "T Diskretna matematika (A2)",
+                "Utorak": "",
+                "Srijeda": "",
+                "Četvrtak": "T Inženjerska matematika 1 (A2)",
+                "Petak": ""
+            },
+            {
+                "time": "17:00",
+                "Ponedjeljak": "T Diskretna matematika (A2)",
                 "Utorak": "",
                 "Srijeda": "",
                 "Četvrtak": "",
-                "Petak": "L Logički dizajn (2-02)"
+                "Petak": ""
             }
         ]
     }

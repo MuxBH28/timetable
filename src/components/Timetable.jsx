@@ -3,7 +3,7 @@ import scheduleData from "../assets/schedule.json";
 
 const Timetable = () => {
     const [search, setSearch] = useState("");
-    const [filters, setFilters] = useState({ P: true, L: true });
+    const [filters, setFilters] = useState({ P: true, L: true, T: true });
     const [currentHour, setCurrentHour] = useState(new Date().getHours());
     const [currentMinute, setCurrentMinute] = useState(new Date().getMinutes());
 
@@ -40,9 +40,15 @@ const Timetable = () => {
         days.forEach((day) => {
             if (slot[day]) {
                 const subject = slot[day];
-                const type = subject.startsWith("P") ? "P" : "L";
+                const type = subject.startsWith("P")
+                    ? "P"
+                    : subject.startsWith("L")
+                        ? "L"
+                        : subject.startsWith("T")
+                            ? "T"
+                            : "";
                 const titleWithoutType = subject
-                    .replace(/^[PL]\s*/, "")
+                    .replace(/^[PLT]\s*/, "")
                     .replace(/\(.*?\)$/, "")
                     .trim();
                 const roomMatch = subject.match(/\((.*?)\)$/);
@@ -112,6 +118,14 @@ const Timetable = () => {
                         />
                         Laboratorije
                     </label>
+                    <label className="flex items-center gap-1">
+                        <input
+                            type="checkbox"
+                            checked={filters.T}
+                            onChange={() => setFilters((prev) => ({ ...prev, T: !prev.T }))}
+                        />
+                        Tutorijali
+                    </label>
                 </div>
             </div>
 
@@ -128,7 +142,11 @@ const Timetable = () => {
                                         className={`p-4 rounded shadow flex flex-col gap-2 ${getBgColor(item.status)}`}
                                     >
                                         <span className="text-x font-bold uppercase text-center">
-                                            {item.type === "P" ? "Predavanje" : "Laboratorija"}
+                                            {item.type === "P"
+                                                ? "Predavanje"
+                                                : item.type === "L"
+                                                    ? "Laboratorija"
+                                                    : "Tutorijal"}
                                         </span>
                                         <p className="font-semibold text-center">{item.title}</p>
                                         <div className="flex justify-between items-center text-x">

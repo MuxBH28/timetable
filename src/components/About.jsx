@@ -51,6 +51,7 @@ const About = () => {
                         <li>Ilhan Čukojević - Dizajn i pronalaženje bugova</li>
                         <li>Bilal Ozdić - Drive linkovi</li>
                         <li>Amel Divović - Testing</li>
+                        <li>Anand Pap - RI Smjer</li>
                         <li>Muhammed Šehić</li>
                     </ul>
                 </div>
