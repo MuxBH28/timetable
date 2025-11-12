@@ -38,7 +38,7 @@
             {
                 "time": "12:00",
                 "Ponedjeljak": "",
-                "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
+                "Utorak": "",
                 "Srijeda": "L Programski Jezici i Prevodioci - PJP (1-11)",
                 "Četvrtak": "P Skladišta Podataka - SP (0-03)",
                 "Petak": ""
@@ -70,7 +70,7 @@
             {
                 "time": "15:00",
                 "Ponedjeljak": "",
-                "Utorak": "",
+                "Utorak": "P Interakcija Čovjek Računar - IČR (2-01)",
                 "Srijeda": "P Testiranje Softvera - TS (0-03)",
                 "Četvrtak": "",
                 "Petak": ""
