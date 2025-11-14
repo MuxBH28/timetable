@@ -38,12 +38,6 @@
     ],
     "homeworks": [
         {
-            "name": "IČR - Predaja zadaće br. 1",
-            "due": "2025-11-13T23:59",
-            "link": "https://c2.etf.unsa.ba/mod/assign/view.php?id=103397",
-            "type": "Zadaća"
-        },
-        {
             "name": "Testiranje softvera - Zadaća 1",
             "due": "2025-11-16T09:59",
             "link": "https://c2.etf.unsa.ba/pluginfile.php/157737/mod_resource/content/1/Zadaca1.pdf",
